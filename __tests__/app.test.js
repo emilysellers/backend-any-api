@@ -11,7 +11,7 @@ describe('trees routes', () => {
   });
 
   it('/trees/:id should return a tree detail', async () => {
-    const res = await request(app).get('trees/1');
+    const res = await request(app).get('/trees/1');
     const redAlder = {
       id: '1',
       name: 'Red Alder',
