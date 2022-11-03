@@ -10,6 +10,18 @@ describe('trees routes', () => {
     return setup(pool);
   });
 
+  it('/trees/:id should return a tree detail', async () => {
+    const res = await request(app).get('trees/1');
+    const redAlder = {
+      id: '1',
+      name: 'Red Alder',
+      botanicalName: 'Alnus rubra',
+      maxHeight: 50,
+      isEvergreen: false,
+    };
+    expect(res.body).toEqual(redAlder);
+  });
+
   it('/trees should return a list of trees', async () => {
     const res = await request(app).get('/trees');
     const expected = trees.map((tree) => {
