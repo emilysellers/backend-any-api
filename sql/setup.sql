@@ -31,7 +31,7 @@ CREATE TABLE pnw_animals (
 
 INSERT INTO pnw_animals (name, diet, habitat) VALUES
 ('American Black Bear', 'plants, fruits, nuts, insects and honey, as well as salmon, small mammals and carrion', 'forested areas in riparian, mixed conifer, lodgepole pine, aspen, white oak and mixed conifer-hardwood forest types'),
-('Anna`s Hummingbird', 'nectar and insects', 'yards, parks, residential streets, riverside woods and coastal scrub'),
+('Anna''s Hummingbird', 'nectar and insects', 'yards, parks, residential streets, riverside woods and coastal scrub'),
 ('Coyote', 'small mammals, birds, insects, fruit and carrion', 'ranges from grasslands to dense forests, and from remote wilderness to highly urbanized areas'),
 ('Hoary Bat', 'flying insects such as flies, moths, mosquitoes, beetles and dragonflies', 'brushy areas along forest edges of middle-aged to older stands where nesting and roosting sites are available'),
 ('Roosevelt Elk', 'various grasses that are plentiful during typical years, as well as eating foliage from shrubs, trees and bushes including trailing blackberry, huckleberry, salal, vine maple, salmonberry, Douglas-fir, western hemlock and western redcedar', 'riparian, mixed conifer and white oak forest types, and in parklands, grasslands and agricultural areas');
