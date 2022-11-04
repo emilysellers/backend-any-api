@@ -41,6 +41,14 @@ describe('animals routes', () => {
     return setup(pool);
   });
 
+  it('/animals should return list of animals', async () => {
+    const res = await request(app).get('/animals');
+    const expected = animals.map((animal) => {
+      return { id: animal.id, name: animal.name };
+    });
+    expect(res.body).toEqual(expected);
+  });
+
   it('/animals/:id should return animal detail', async () => {
     const res = await request(app).get('/animals/3');
     const coyote = {
@@ -51,13 +59,6 @@ describe('animals routes', () => {
         'ranges from grasslands to dense forests, and from remote wilderness to highly urbanized areas',
     };
     expect(res.body).toEqual(coyote);
-  });
-
-  it('/animals should return list of animals', async () => {
-    const res = await request(app).get('/animals');
-    const expected = animals.map((animal) => {
-      return { id: animal.id, name: animal.name };
-    });
   });
 
   afterAll(() => {
