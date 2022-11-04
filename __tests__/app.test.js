@@ -41,6 +41,18 @@ describe('animals routes', () => {
     return setup(pool);
   });
 
+  it('/animals/:id should return animal detail', async () => {
+    const res = await request(app).get('/animals/3');
+    const coyote = {
+      id: '3',
+      name: 'Coyote',
+      diet: 'small mammals, birds, insects, fruit and carrion',
+      habitat:
+        'ranges from grasslands to dense forests, and from remote wilderness to highly urbanized areas',
+    };
+    expect(res.body).toEqual(coyote);
+  });
+
   it('/animals should return list of animals', async () => {
     const res = await request(app).get('/animals');
     const expected = animals.map((animal) => {
