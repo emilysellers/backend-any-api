@@ -7,9 +7,9 @@ const { trees } = require('../lib/trees-data');
 const { animals } = require('../lib/animals-data');
 
 describe('trees routes', () => {
-  beforeEach(() => {
-    return setup(pool);
-  });
+  // beforeEach(() => {
+  //   return setup(pool);
+  // });
 
   it('/trees/:id should return a tree detail', async () => {
     const res = await request(app).get('/trees/1');
@@ -31,9 +31,9 @@ describe('trees routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  afterAll(() => {
-    pool.end();
-  });
+  // afterAll(() => {
+  //   pool.end();
+  // });
 });
 
 describe('animals routes', () => {
